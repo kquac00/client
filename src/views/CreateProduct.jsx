@@ -3,13 +3,13 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 
+
 const CreateProduct = () => {
     const[title, setTitle] = useState("")
     const[price, setPrice] = useState("")
     const[description, setDescription] = useState("")
 
     const navigate = useNavigate()
-
     const handleSubmit = (e)=>{
         e.preventDefault()
         const newFrontEndData = {title, price, description}
@@ -22,10 +22,9 @@ const CreateProduct = () => {
             console.log(err)
         })
     }
-
+    
     return (
         <div className='form'>
-            <h1>Product Manager</h1>
             <form onSubmit={handleSubmit} className='form1'>
                 <div>
                 <label>Title</label>

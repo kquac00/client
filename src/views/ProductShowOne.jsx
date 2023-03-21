@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import ProductDetails from '../components/ProductDetails'
 
 
 const ProductShowOne = () => {
@@ -16,15 +17,18 @@ const ProductShowOne = () => {
                 console.log(err)
             })
 
-    },[id])
+    }, [id])
 
 
 
-return (
-    <div>
-       I am here
-    </div>
-)
+    return (
+        <div>
+            <h1>Product details</h1>
+            {   product&&
+                <ProductDetails product={product} />
+            }
+        </div>
+    )
 }
 
 export default ProductShowOne

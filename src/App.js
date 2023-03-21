@@ -1,4 +1,4 @@
-import ProductForm from './components/ProductForm';
+
 import './App.css';
 import { Main } from './views/Main';
 import { Routes, Route } from 'react-router-dom'
@@ -9,12 +9,12 @@ import { Link } from 'react-router-dom'
 
 function App() {
   return (
-    <div className='form'>
+    <div className='form1'>
       <p>
-        <Link to="/ProductManager/new">Form to create a product</Link>
+        <Link to="/ProductManager/new">Create a product</Link>
         </p>
         <p>
-        <Link to="/ProductManager">Back to Dashboard/Main</Link>
+        <Link to="/ProductManager">Dashboard/Main</Link>
       </p>
       <Routes>
         <Route path="/ProductManager" element={<Main />} />
@@ -22,6 +22,7 @@ function App() {
         <Route path="/ProductManager/:id" element={<ProductShowOne />} />
         <Route path="/ProductManager/:id/edit" element={<UpdateProduct />} />
       </Routes>
+      
     </div>
   );
 }
